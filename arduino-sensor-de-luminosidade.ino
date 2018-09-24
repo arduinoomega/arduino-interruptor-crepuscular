@@ -14,7 +14,7 @@ void setup() {
 void loop() {
   int sensor = analogRead (captacao_sensor); // cria a variavel "sensor" e a condiciona a receber os sinais advindos do sensor de luminosidade
   float valorAnalog_sensor = sensor * (5.0/ 1023.0); // modifica a leitura dos sinais advindos do sensor de luninosidade para forma de tensão
-  Serial.println(valorAnalog_sensor); // printa no monitor serial os valores recebidos em "valorAnalog_sensor"
+  Serial.println(valorAnalog_sensor); // escreve no monitor serial os valores recebidos em "valorAnalog_sensor"
 if(valorAnalog_sensor > 2.50) // se o valor de tensão recebido do sensor for maior que 2,5V, é executado o código abaixo
 {
   digitalWrite (rele, LOW); // comuta o módulo relé para o acendimento da lâmpada (Obs: o modulo relé atua em nivel baixo LOW)
